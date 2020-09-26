@@ -6,39 +6,47 @@
         <title>Calculadora</title>
         <script language="javaScript" src="atvcalc.js"></script>
         <link rel="stylesheet" href="atvcalc.css">
+        <link rel="icon" href="https://www.freepngimg.com/download/paper_sheet/54492-8-calculator-free-clipart-hd.png">
     </head>
     <body>
             <form name="calc">
                 <div id="calculadora">
-                    <input type="text" name="visor" />
+                    <input type="text" name="display" />
                     <br>
                     <!-- LINHA 1 -->
                     <div id="linha1">
-                        <input type="button" value="7" class="botaob" onclick="botao(value);"/>
-                        <input type="button" value="8" class="botaob" onclick="botao(value);"/>
-                        <input type="button" value="9" class="botaob" onclick="botao(value);"/>
-                        <input type="button" value="/" class="botaob" onclick="botao(value);"/>
+                        <input type="button" value="7" class="botaob" onclick="addChar(this.form.display, '7')"/>
+                        <input type="button" value="8" class="botaob" onclick="addChar(this.form.display, '8')"/>
+                        <input type="button" value="9" class="botaob" onclick="addChar(this.form.display, '9')"/>
+                        <input type="button" value="%" class="botaob" onclick="percent(this.form.display)"/>
                     </div>
                     <!-- LINHA 2 -->
                     <div id="linha2">
-                        <input type="button" value="4" class="botaob" onclick="botao(value);"/>
-                        <input type="button" value="5" class="botaob" onclick="botao(value);"/>
-                        <input type="button" value="6" class="botaob" onclick="botao(value);"/>
-                        <input type="button" value="*" class="botaob" onclick="botao(value);"/>
+                        <input type="button" value="4" class="botaob" onclick="addChar(this.form.display, '4')"/>
+                        <input type="button" value="5" class="botaob" onclick="addChar(this.form.display, '5')"/>
+                        <input type="button" value="6" class="botaob" onclick="addChar(this.form.display, '6')"/>
+                        <input type="button" value="/" class="botaob" onclick="addChar(this.form.display, '/')"/>
                     </div>
                     <!-- LINHA 3 -->
                     <div id="linha3">
-                        <input type="button" value="1" class="botaob" onclick="botao(value);"/>
-                        <input type="button" value="2" class="botaob" onclick="botao(value);"/>
-                        <input type="button" value="3" class="botaob" onclick="botao(value);"/>
-                        <input type="button" value="-" class="botaob" onclick="botao(value);"/>
+                        <input type="button" value="1" class="botaob" onclick="addChar(this.form.display, '1')"/>
+                        <input type="button" value="2" class="botaob" onclick="addChar(this.form.display, '2')"/>
+                        <input type="button" value="3" class="botaob" onclick="addChar(this.form.display, '3')"/>
+                        <input type="button" value="x" class="botaob" onclick="addChar(this.form.display, '*')"/>
                     </div>
                     <!-- LINHA 4 -->
                     <div id="linha4">
-                        <input type="button" value="C" class="botaob" onclick="limpar();"/>
-                        <input type="button" value="0" class="botaob" onclick="botao(value);"/>
-                        <input type="button" value="=" class="botaob" onclick="calcular();"/>
-                        <input type="button" value="+" class="botaob" onclick="botao(value);"/>
+                        <input type="button" value="+/-" class="botaob" onclick="changeSign(this.form.display)"/>
+                        <input type="button" value="0" class="botaob" onclick="addChar(this.form.display, '0')"/>
+                        <input type="button" value="." class="botaob" onclick="addChar(this.form.display, '.')"/>
+                        <input type="button" value="-" class="botaob" onclick="addChar(this.form.display, '-')"/>
+                    </div>
+                    <!-- LINHA 5 -->
+                    <div id="linha5">
+                        <input type="button" value="C" class="botaob" onclick="this.form.display.value= 0 "/>
+                        <input type="button" value="<--" class="botaob" onclick="deleteChar(this.form.display)"/>
+                        <input type="button" value="=" class="botaob" onclick="compute(this.form)"/>
+                        <input type="button" value="+" class="botaob" onclick="addChar(this.form.display, '+')"/>
                     </div>
                 </div>
             </form>

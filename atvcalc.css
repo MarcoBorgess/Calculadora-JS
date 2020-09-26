@@ -38,12 +38,14 @@ div#calculadora div {
 div#calculadora div input:nth-child(4) {
     background: #b4b4b4;
 }
-div#linha4 input:nth-child(1) {
-    background: #d45656;
+div#linha5 input:nth-child(1) {
+    background: #e05050;
 }
-
-div#linha4 input:nth-child(3) {
-    background: #4467db;
+div#linha5 input:nth-child(2) {
+    background: #d86c6c;
+}
+div#linha5 input:nth-child(3) {
+    background: #6c85d8;
 }
 input[type=button]:hover {
     filter: brightness(50%);
