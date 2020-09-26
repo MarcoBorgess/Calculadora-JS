@@ -45,6 +45,7 @@ div#linha5 input:nth-child(2) {
     background: #d86c6c;
 }
 div#linha5 input:nth-child(3) {
+    width: 204px;
     background: #6c85d8;
 }
 input[type=button]:hover {
