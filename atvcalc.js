@@ -223,3 +223,4 @@ decimalButton.addEventListener("click", () => {
 equalsButton.addEventListener("click", () => {
     calculator.generateResult();
 });
+
