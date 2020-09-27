@@ -3,52 +3,45 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA=Compatible" content="ie=edge">
         <title>Calculadora</title>
-        <script language="javaScript" src="atvcalc.js"></script>
+        <script type="text/javascript" src="atvcalc.js" defer></script>
         <link rel="stylesheet" href="atvcalc.css">
         <link rel="icon" href="https://www.freepngimg.com/download/paper_sheet/54492-8-calculator-free-clipart-hd.png">
     </head>
     <body>
-            <form name="calc">
-                <div id="calculadora">
-                    <input type="text" name="display" />
-                    <br>
-                    <!-- LINHA 1 -->
-                    <div id="linha1">
-                        <input type="button" value="7" class="botaob" onclick="addChar(this.form.display, '7')"/>
-                        <input type="button" value="8" class="botaob" onclick="addChar(this.form.display, '8')"/>
-                        <input type="button" value="9" class="botaob" onclick="addChar(this.form.display, '9')"/>
-                        <input type="button" value="/" onclick="addChar(this.form.display, '/')"/>                       
-                    </div>
-                    <!-- LINHA 2 -->
-                    <div id="linha2">
-                        <input type="button" value="4" onclick="addChar(this.form.display, '4')"/>
-                        <input type="button" value="5" onclick="addChar(this.form.display, '5')"/>
-                        <input type="button" value="6" onclick="addChar(this.form.display, '6')"/>
-                        <input type="button" value="x" onclick="addChar(this.form.display, '*')"/>
-                    </div>
-                    <!-- LINHA 3 -->
-                    <div id="linha3">
-                        <input type="button" value="1" onclick="addChar(this.form.display, '1')"/>
-                        <input type="button" value="2" onclick="addChar(this.form.display, '2')"/>
-                        <input type="button" value="3" onclick="addChar(this.form.display, '3')"/>
-                        <input type="button" value="-" onclick="addChar(this.form.display, '-')"/>
-                    </div>
-                    <!-- LINHA 4 -->
-                    <div id="linha4">
-                        <input type="button" value="+/-" onclick="changeSign(this.form.display)"/>
-                        <input type="button" value="0" onclick="addChar(this.form.display, '0')"/>
-                        <input type="button" value="." onclick="addChar(this.form.display, '.')"/>
-                        <input type="button" value="+" id="botaom" onclick="addChar(this.form.display, '+')"/>
-                    </div>
-                    <!-- LINHA 5 -->
-                    <div id="linha5">
-                        <input type="button" value="C" onclick="this.form.display.value= 0 "/>
-                        <input type="button" value="<--" onclick="deleteChar(this.form.display)"/>
-                        <input type="button" value="=" id="calculate" class="botaob" onclick="compute(this.form)"/>
-                        
-                    </div>
-                </div>
-            </form>
+        <main id="calculator">
+            <section id="display">
+                <input type="text" id="history" value="" disabled>
+                <output name="result" id="result" for="history">0</output>
+            </section>
+            <section id="keypad">
+                <!-- Linha 1 -->
+                <button type="button" data-all-clear>C</button>
+                <button type="button" data-backspace>&#8676;</button>    
+                <button type="button" data-percent>%</button>    
+                <button type="button" data-operator="÷" class="operator">&divide;</button>  
+                <!-- Linha 2 -->
+                <button type="button" data-number="7">7</button>
+                <button type="button" data-number="8">8</button>    
+                <button type="button" data-number="9">9</button>    
+                <button type="button" data-operator="x" class="operator">&times;</button>   
+                <!-- Linha 3 -->
+                <button type="button" data-number="4">4</button>
+                <button type="button" data-number="5">5</button>    
+                <button type="button" data-number="6">6</button>    
+                <button type="button" data-operator="-" class="operator">&minus;</button>   
+                <!-- Linha 4 -->
+                <button type="button" data-number="1">1</button>
+                <button type="button" data-number="2">2</button>    
+                <button type="button" data-number="3">3</button>    
+                <button type="button" data-operator="+" class="operator">&plus;</button>   
+                <!-- Linha 5 -->
+                <button type="button" data-negation>&plus;/&minus;</button>
+                <button type="button" data-number="0">0</button>    
+                <button type="button" data-decimal=".">&sdot;</button>    
+                <button type="button" data-equals="=" class="operator">&equals;</button>         
+            </section>
+        </main>
     </body>
 </html>
